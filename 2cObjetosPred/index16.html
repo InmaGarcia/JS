@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="button"
+        value="Abrir ventana secundaria"
+        onclick="sec = window.open('segunda.html','pagSecundaria','width=300, height=400, top=400, left=400')"
+      />
+      <input
+        type="button"
+        value="Mover a la derecha"
+        onclick="sec.moveBy(200,-100); sec.focus()"
+      /> 
+      <input
+        type="button"
+        value="Mover a 500x200"
+        onclick="sec.moveTo(500,200); sec.focus()"
+      />
+      <input
+        type="button"
+        value="Aumentar tamaño"
+        onclick="sec.resizeBy(100,100); sec.focus()"
+      />
+      <input
+        type="button"
+        value="Cambiar tamaño 100x150"
+        onclick="sec.resizeTo(100,150); sec.focus()"
+      />
+    </form>
+  </body>
+</html>

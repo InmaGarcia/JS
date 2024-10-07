@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página secundaria</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="button"
+        value="Fondo verde"
+        onclick="document.body.style.backgroundColor='green'"
+      />
+      <input
+        type="button"
+        value="Fondo rojo"
+        onclick="window.opener.document.body.style.backgroundColor='red'"
+      />
+      <input
+        type="button"
+        value="Cerrar esta ventana"
+        onclick="window.close()"
+      />
+      <input
+        type="button"
+        value="Cerrar todo"
+        onclick="window.close() ; window.opener.close()"
+      />
+    </form>
+  </body>
+</html>
