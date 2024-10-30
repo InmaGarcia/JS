@@ -1,7 +1,12 @@
-for (let i = 0; i <= 9; i++) {
-  document.getElementById(`${i}`).addEventListener("click", imprimir);
+imprimir = (i) => {
+  document.body.innerHTML += `<p>boton ${i}</p>`;
+};
 
-  function imprimir(i) {
-    document.body.innerHTML = `<div>${i}</div>`;
+inicio = () => {
+  for (let i = 0; i <= 9; i++) {
+    document
+      .getElementById(`b${i}`)
+      .addEventListener("click", () => imprimir(i));
   }
-}
+};
+document.addEventListener("DOMContentLoaded", inicio);
