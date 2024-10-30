@@ -1,12 +1,10 @@
-imprimir = (i) => {
-  document.body.innerHTML += `<p>boton ${i}</p>`;
+imprimir = () => {
+  document.getElementById("resultado").innerHTML += `boton ${i}`;
 };
 
 inicio = () => {
   for (let i = 0; i <= 9; i++) {
-    document
-      .getElementById(`b${i}`)
-      .addEventListener("click", () => imprimir(i));
+    document.getElementById(`b` + i).addEventListener("click", () => imprimir);
   }
 };
 document.addEventListener("DOMContentLoaded", inicio);
