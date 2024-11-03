@@ -1,21 +1,48 @@
-inicio = () =>{
-    document.getElementById("validar").addEventListener("click", validar);
-    
-}
+inicio = () => {
+  var $nombre = document.getElementById("nombre").value.trim();
+  var $apellido = document.getElementById("apellidos").value.trim();
 
-validar = () =>{
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellidos").value;
+  let mensajeErrorNombre = "";
+  let mensajeErrorApellidos = "";
+  let vocales = "a" && "e" && "i" && "o" && "u";
+  if (!vocales.test(nombre)) {
+    mensajeErrorNombre = "El nombre debe comenzar con una vocal.";
+  }
 
-    alert(nombre, " - ", apellido);
+  if (apellidos.split(" ").length < 2) {
+    mensajeErrorApellidos = "Los apellidos deben tener al menos dos palabras.";
+  }
 
-    if(nombre.charAt(1) != "a"||"e"||"i"||"o"||"u"){
-        document.getElementById("error1").innerHTML += "<p>El nombre no empieza por vocal</p>";
-        document.getElementById("error1").innerHTML
-    }
-    if(apellido.split(" ").length < 2){
-        document.getElementById("error2").innerHTML += "<p>Tienes que tener mínimo dos apellidos</p>";
-    }
-}
+  // Mostrar mensajes de error debajo de cada input
+  document.getElementById("error-nombre").innerText = mensajeErrorNombre;
+  document.getElementById("error-apellidos").innerText = mensajeErrorApellidos;
+
+  // Si no hay errores, mostrar mensaje de éxito
+  if (mensajeErrorNombre === "" && mensajeErrorApellidos === "") {
+    alert("Formulario válido");
+  }
+};
 
 document.addEventListener("DOMContentLoaded", inicio);
+
+
+
+function cuadrado(n) {
+  return n * n;
+}
+
+console.log("Función tradicional:" + cuadrado(5));
+
+let valor = function (n) {
+  return n * n;
+};
+
+console.log("Función anónima:" + valor(5));
+
+let valor2 = (n) => {
+  return n * n;
+};
+
+console.log("Función flecha:" + valor2(5));
+
+
