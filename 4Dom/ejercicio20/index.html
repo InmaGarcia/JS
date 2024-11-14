@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 19</title>
+    <script src="../ejercicio20/js/codigo.js"></script>
+  </head>
+  <body>
+    <h1>Tabla HTML dibujada con JS</h1>
+
+    <div>
+      <input
+        type="text"
+        id="nombreN"
+        placeholder="Por favor escriba el nombre del producto"
+      />
+      <input
+        type="text"
+        id="precioN"
+        placeholder="Por favor escriba su precio"
+      />
+      <input
+        type="text"
+        id="codigoN"
+        placeholder="Por favor escriba su codigo"
+      />
+      <input type="button" id="add" value="Añadir" />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Código</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla"></tbody>
+    </table>
+    <button id="btn1">Seleccionar Todos</button>
+    <button id="btn2">Deseleccionar todos</button>
+    <button id="btn3">Eliminar fila</button>
+  </body>
+</html>
