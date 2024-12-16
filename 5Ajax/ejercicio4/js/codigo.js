@@ -19,14 +19,27 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 lista = (results) => {
-  var $ul = document.getElementById("lista");
+  var ul = document.getElementById("lista");
   results.forEach((el) => {
-    $li = document.createElement("li");
-    $li.innerHTML = `${el.category} - ${el.question} - Respuesta Correcta: <b>${el.correct_answer}</b>`;
-    $ul.appendChild($li);
-    $li.setAttribute(
-      "style",
-      "backgroundColor: #e9e9e9; padding: 10px; margin: 5px 0; border: 1px solid #ccc;borderRadius: 4px; fontFamily: Arial, sans-serif; color: #333;"
-    );
+    li = document.createElement("li");
+    li.innerHTML = `${el.category} - ${el.question} - Respuesta Correcta: <b>${el.correct_answer}</b>`;
+
+    li.style.backgroundColor = "#e9e9e9";
+    li.style.padding = "10px";
+    li.style.margin = "5px 0";
+    li.style.border = "1px solid #ccc";
+    li.style.borderRadius = "4px";
+    li.style.fontFamily = "Arial, sans-serif";
+    li.style.color = "#333";
+
+    li.addEventListener("mouseover", function () {
+      li.style.backgroundColor = "#d1d1d1";
+    });
+
+    li.addEventListener("mouseout", function () {
+      li.style.backgroundColor = "#e9e9e9";
+    });
+
+    ul.appendChild(li);
   });
 };
